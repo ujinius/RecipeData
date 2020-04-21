@@ -17,7 +17,14 @@
 `rspec`
 
 ## Run server
+
+##### <u>development mode</u>:
 `rails s`
+
+##### <u>production mode</u>:
+
+`RAILS_ENV=production CONTENTFUL_ACCESS_TOKEN=... CONTENTFUL_SPACE_ID=... CONTENTFUL_ENVIRONMENT=... rails s` 
+
 
 and open `http://localhost:3000/` in your browser
 

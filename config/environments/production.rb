@@ -5,6 +5,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.assets.compile = false
+  config.require_master_key = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
