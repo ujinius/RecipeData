@@ -1,0 +1,20 @@
+<% cache @recipe do %>
+  <% if @recipe.nil? %>
+    <div>There is no recipe by given identifier</div>
+  <% else %>
+    <div><b><%= @recipe.title %></b></div>
+    <%= image_tag details_image(@recipe.photo), alt: @recipe.title %>
+
+    <% unless @recipe.tags.nil? %>
+    <div><b>Tags:</b> <%= @recipe.tags.map(&:name).join(', ') %></div>
+    <% end %>
+
+    <div><%= @recipe.description %></div>
+
+    <% unless @recipe.chef.nil? %>
+    <div><b>Chef name:</b> <%= @recipe.chef.name %></div>
+    <% end %>
+
+    <%= link_to '< Back', 'javascript: history.back();' %>
+  <% end %>
+<% end %>

@@ -1,0 +1,12 @@
+<ol>
+<% @recipes.each do |one| %>
+  <% cache one do %>
+  <li>
+    <%= link_to static_path(one.id) do %>
+    <div><%= one.title %></div>
+    <%= image_tag list_image(one.photo), alt: one.title %>
+    <% end %>
+  </li>
+  <% end %>
+<% end %>
+</ol>
