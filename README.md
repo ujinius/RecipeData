@@ -22,9 +22,9 @@
 `rails s`
 
 ##### <u>production mode</u>:
-
-`RAILS_ENV=production CONTENTFUL_ACCESS_TOKEN=... CONTENTFUL_SPACE_ID=... CONTENTFUL_ENVIRONMENT=... rails s` 
-
+- run `RAILS_ENV=production rails assets:precompile`
+- setup `nginx` or other web server to give static content (and point `public` directory for static content processing)
+- run `RAILS_ENV=production RAILS_MASTER_KEY=686b737dac14e68069e614b939b02ee4 CONTENTFUL_ACCESS_TOKEN=... CONTENTFUL_SPACE_ID=... CONTENTFUL_ENVIRONMENT=... rails s` (replace dots by contentful vars values) 
 
 and open `http://localhost:3000/` in your browser
 
